@@ -1,5 +1,5 @@
 #! python3
-# Program checks if a password is strong according to four criteria.
+# Test file for password function.
 
 from password import check_password_strength
 
