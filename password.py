@@ -10,17 +10,12 @@ checkRegex = [
     re.compile(r'.*[A-Z].*')       # checks has at least one upper case character
 ]
 
-passwords = ['ImY0urFavorIte','ImYourFavorIte','ImY0urF','imy0urfavorite','IMY0URFAVORITE']
-
-def passwordStrength(pw):
+def check_password_strength(pw):
     for condition in checkRegex:
         mo = condition.search(pw)
         if mo == None:
-            ans = 'weak.'
+            ans = 'weak'
             break
         else:
-            ans = 'strong.'
+            ans = 'strong'
     return ans
-
-for i in passwords:
-    print('Password ' + i + ' is ' + passwordStrength(i))
